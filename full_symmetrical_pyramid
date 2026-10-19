@@ -1,0 +1,30 @@
+//Full Symmetrical Pyramid
+#include <iostream>
+
+int main() {
+    int rows;
+
+    std::cout << "Enter the number of rows for the pyramid: ";
+    std::cin >> rows;
+
+    std::cout << "\n--- Full Pyramid Pattern ---\n\n";
+
+    // Outer loop to handle the number of rows
+    for (int i = 1; i <= rows; ++i) {
+        
+        // 1. Inner loop to print leading empty spaces
+        for (int space = 1; space <= rows - i; ++space) {
+            std::cout << " ";
+        }
+
+        // 2. Inner loop to print the stars
+        for (int j = 1; j <= i; ++j) {
+            std::cout << "* ";
+        }
+
+        // Move to the next line after completing the row
+        std::cout << std::endl;
+    }
+
+    return 0;
+}
